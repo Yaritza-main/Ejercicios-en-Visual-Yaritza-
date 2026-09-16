@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Números Pares</title>
+</head>
+<body>
+
+    <h2>Filtro de Números Pares</h2>
+
+    <input type="number" id="limite" placeholder="Ingrese el límite">
+    <button onclick="mostrarPares()">Mostrar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarPares() {
+            var limite = Number(document.getElementById("limite").value);
+            var resultado = "";
+
+            for (var i = 1; i <= limite; i++) {
+                if (i % 2 == 0) {
+                    resultado += i + " ";
+                }
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>

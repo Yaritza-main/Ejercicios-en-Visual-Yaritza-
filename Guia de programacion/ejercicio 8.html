@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <h2>Calculadora Básica</h2>
+
+    <input type="number" id="numero1" placeholder="Primer número">
+    <input type="number" id="numero2" placeholder="Segundo número">
+
+    <br><br>
+
+    <button onclick="calcular(1)">Suma</button>
+    <button onclick="calcular(2)">Resta</button>
+    <button onclick="calcular(3)">Multiplicación</button>
+    <button onclick="calcular(4)">División</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular(opcion) {
+            var numero1 = Number(document.getElementById("numero1").value);
+            var numero2 = Number(document.getElementById("numero2").value);
+            var resultado;
+
+            switch (opcion) {
+                case 1:
+                    resultado = numero1 + numero2;
+                    break;
+                case 2:
+                    resultado = numero1 - numero2;
+                    break;
+                case 3:
+                    resultado = numero1 * numero2;
+                    break;
+                case 4:
+                    resultado = numero1 / numero2;
+                    break;
+            }
+
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+    </script>
+
+</body>
+</html>

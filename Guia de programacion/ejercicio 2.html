@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Número Par o Impar</title>
+</head>
+<body>
+
+    <h2>Determinar si un número es par o impar</h2>
+
+    <input type="number" id="numero" placeholder="Escriba un número">
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var numero = document.getElementById("numero").value;
+
+            if (numero % 2 == 0) {
+                document.getElementById("resultado").innerHTML = "El número es par";
+            } else {
+                document.getElementById("resultado").innerHTML = "El número es impar";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparación de Numeros</title>
+</head>
+<body>
+
+    <h2>Comparación de Dos Numeros</h2>
+
+    <input type="number" id="numero1" placeholder="Primer número">
+    <input type="number" id="numero2" placeholder="Segundo número">
+
+    <button onclick="comparar()">Comparar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function comparar() {
+            var numero1 = document.getElementById("numero1").value;
+            var numero2 = document.getElementById("numero2").value;
+
+            if (numero1 > numero2) {
+                document.getElementById("resultado").innerHTML = "El primer número es mayor";
+            } else if (numero2 > numero1) {
+                document.getElementById("resultado").innerHTML = "El segundo número es mayor";
+            } else {
+                document.getElementById("resultado").innerHTML = "Los dos números son iguales";
+            }
+        }
+    </script>
+
+</body>
+</html>

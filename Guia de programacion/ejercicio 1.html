@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verificacion de Edad</title>
+    </head>
+    <body>
+
+        <h2>Verificacion de Edad para votar</h2>
+
+        <p>Ingrese su edad:</p>
+
+        <input type="text" id="edad">
+        <button onclick="verificar()">verificar</button>
+
+        <p id="mensaje"></p>
+
+        <script>
+            function verificar () {
+                var edad = document.getElementById("edad").value;
+
+                if (edad >=18) {
+                    document.getElementById("mensaje").innerHTML = "Puede votar.";
+                } else {
+                    document.getElementById("mensaje").innerHTML = "No puede votar.";
+                    }
+                    }
+        </script>
+
+    </body>
+</html>

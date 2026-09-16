@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descuento en Compras</title>
+</head>
+<body>
+
+    <h2>Cálculo de Descuento</h2>
+
+    <input type="number" id="monto" placeholder="Ingrese el monto de compra">
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            var monto = document.getElementById("monto").value;
+
+            if (monto > 100) {
+                var descuento = monto * 0.10;
+                var total = monto - descuento;
+
+                document.getElementById("resultado").innerHTML =
+                    "Descuento: $" + descuento +
+                    "<br>Total a pagar: $" + total;
+            } else {
+                document.getElementById("resultado").innerHTML =
+                    "No tiene descuento.<br>Total a pagar: $" + monto;
+            }
+        }
+    </script>
+
+</body>
+</html>

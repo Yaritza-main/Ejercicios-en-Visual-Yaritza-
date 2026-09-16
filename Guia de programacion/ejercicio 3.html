@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estado Academico</title>
+</head>
+<body>
+
+    <h2>Estado Academico del alumno</h2>
+
+    <input type="number" id="nota" placeholder="Ingrese la calificacion">
+    <button onclick="verificar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var nota = document.getElementById("nota").value;
+
+            if (nota >= 70) {
+                document.getElementById("resultado").innerHTML = "Aprobado";
+                document.getElementById("resultado").style.color = "green";
+            } else {
+                document.getElementById("resultado").innerHTML = "Reprobado";
+                document.getElementById("resultado").style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
